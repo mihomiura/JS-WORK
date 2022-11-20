@@ -12,7 +12,7 @@
 <body>
 <h1 class="u-mbm is-big">JS1</h1>
 <div class="wrapper">
-  <div class="u-mbm btn">Q1</div>
+  <div class="u-mbm btn" id="q1">Q1</div>
   <div class="u-mbm btn">Q2</div>
   <div class="u-mbm btn">Q3</div>
   <div class="u-mbm btn">Q4</div>
@@ -64,6 +64,13 @@
   // js課題① 下記問題のJSを実装して下さい
 
   // 第1問 ロードから5秒後にQ1の要素の文字サイズを30pxにせよ。
+  document.addEventListener('DOMContentLoaded', function(){
+    window.setTimeout(function()  {
+      document.getElementById("q1").style.fontSize="30px";
+    }, 5000);
+  });
+
+
 
   // 第2問 Q2の要素をクリックしたら背景色を赤、文字色を黒にせよ。
 
