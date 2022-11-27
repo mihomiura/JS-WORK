@@ -47,7 +47,9 @@
     const question = window.confirm("年代を確認しますか？");
     if(question) {
       age =  window.prompt('年齢を入力してください');
-      if(0 <= age && age <= 1) {
+      if(age == null || age == '') {
+        window.alert('ちゃんといれてください');
+      }else if(0 <= age && age <= 1) {
         window.alert(age + '歳のあなたは乳児でちゅ。');
       }else if(2 <= age && age <= 6) {
         window.alert(age + '歳のあなたは幼児でしゅ。');
@@ -65,6 +67,8 @@
         window.alert(age + '歳のあなたは高齢者じゃ。');
       }else if(100 <= age) {
         window.alert(age + 'すごい。');
+      }else{
+        window.alert('ちゃんといれてください');
       }
     }else{
     }

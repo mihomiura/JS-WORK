@@ -107,10 +107,12 @@
   // 第5問 Q5の要素をクリックしたらこの要素からis-bigというクラスを削除せよ。
   const Q5 = document.getElementById("q5");
   Q5.addEventListener('click',function() {
-  Q5.classList.remove('is-big');
+    Q5.classList.remove('is-big');
   })
 
   // 第6問 Q6の要素をクリックしたらこの要素を0.5秒かけてmargin-rightとmargin-bottomを150pxの位置に移動させよ。
+  const Q6 = document.getElementById("q6");
+  const wrapper = document.getElementById("wrapper");
   function myMove() {
     let id = null;
     const elem = document.getElementById("q6");
@@ -119,19 +121,18 @@
     clearInterval(id);
     id = setInterval(frame, 5);
     function frame() {
-    if (pos == 150) {
-      clearInterval(id);
-    } else {
-      pos++;
-      elem.style.marginRight = pos + "px"; 
-      elem.style.marginBottom = pos + "px"; 
-      elem.style.position = "absolute";
-      elem.style.top= pos + "px"; 
-      elem.style.left = pos + "px";
-      wrapper.style.position = "relative";
+      if (pos == 150) {
+        clearInterval(id);
+      }else {
+        pos++;
+        elem.style.marginLeft = pos + "px"; 
+        elem.style.marginTop = pos + "px"; 
+      }
     }
   }
-  }
+        
+      
+  
 
   // 第7問 Q7の要素をクリックしたら、その要素が「何番目のdlの子要素」かをconsole.log()とalert()を用いて表示させよ。（最初の要素は0ではなく1と表示されること）Hint：closest()メソッドを使う
   //document.getElementById('q7').addEventListener('click',function(e){
